@@ -1,0 +1,26 @@
+.navbar {
+  background-color: $primary-color;
+  padding: 1rem;
+  color: #fff;
+
+  .nav-link {
+    color: #fff;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.container {
+  @include flex-center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.footer {
+  background-color: $primary-color;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
