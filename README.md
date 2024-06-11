@@ -22,11 +22,6 @@ Once downloaded, open the terminal in the project directory, and install depende
 npm install
 ```
 
-```
-  projectId: 'YOUR_PROJECT_ID',
-  dataset: 'NAME_OF_YOUR_DATASET',
-```
-
 Set up environment variables
 Create a .env file in the root of the project and add the following environment variables:
 
