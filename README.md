@@ -1,75 +1,44 @@
-# Nuxt 3 Minimal Starter
+# CMS Frontend
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to the CMS Frontend repository. This project is the frontend application for a Content Management System (CMS) build in Nuxt 3. The goal of this project is to provide a user-friendly interface for managing and displaying content.
+
+## Prerequisites
+
+You will need [Node.js](https://nodejs.org) version 20.10.0 or greater installed on your system.
 
 ## Setup
 
-Make sure to install the dependencies:
+Get the code by either cloning this repository using git
 
-```bash
-# npm
+```
+git clone https://github.com/Hamid-Hussain/cms_frontend.git
+```
+
+... or [downloading source code](https://github.com/Hamid-Hussain/cms_frontend) code as a zip archive.
+
+Once downloaded, open the terminal in the project directory, and install dependencies with:
+
+```
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+```
+  projectId: 'YOUR_PROJECT_ID',
+  dataset: 'NAME_OF_YOUR_DATASET',
+```
 
-Start the development server on `http://localhost:3000`:
+Set up environment variables
+Create a .env file in the root of the project and add the following environment variables:
 
-```bash
-# npm
+```
+BASE_URL=http://localhost:5500/v1
+
+```
+
+Then start the app with:
+
+```
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+The app should now be up and running at http://localhost:3000 🚀
