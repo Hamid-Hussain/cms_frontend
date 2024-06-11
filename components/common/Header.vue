@@ -14,13 +14,21 @@ const debounce = () => {
   };
 };
 const login = () => {
-  if (isLoggedIn) {
+  if (getToken()) {
     useAuthStore().logout();
   }
   navigateTo("/auth/login");
 };
 
-const isLoggedIn = computed(() => true);
+const getToken = () => {
+  console.log("innn");
+  if (process.client) {
+    console.log("process.clinetttt", localStorage.getItem("auth-token"));
+    return localStorage.getItem("auth-token");
+  } else {
+    return undefined;
+  }
+};
 const search = debounce(() => {});
 </script>
 <template>
@@ -50,13 +58,6 @@ const search = debounce(() => {});
           <div>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <!-- <NuxtLink class="nav-link" to="/">Home</NuxtLink> -->
-                <!-- <input
-                  v-model="searchQury"
-                  type="text"
-                  placeholder="search"
-                  
-                /> -->
                 <div class="search-container">
                   <input
                     v-model="searchQury"
@@ -67,18 +68,20 @@ const search = debounce(() => {});
                   />
                 </div>
               </li>
-              <!-- <li class="nav-item">
-                <NuxtLink class="nav-link" to="/">Home</NuxtLink>
-              </li> -->
             </ul>
           </div>
           <div class="me-5">
             <button class="btn btn-outline-primary me-2" @click="login">
-              {{ isLoggedIn ? "Log out" : "Login" }}
+              {{ getToken() ? "Log out" : "Login" }}
             </button>
             <button
               class="btn btn-outline-secondary"
-              @click="() => navigateTo('/blogs/create')"
+              @click="
+                () =>
+                  getToken()
+                    ? navigateTo('/blogs/create')
+                    : navigateTo('/auth/login')
+              "
             >
               Write
             </button>
