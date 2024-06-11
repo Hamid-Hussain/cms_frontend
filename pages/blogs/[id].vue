@@ -10,6 +10,15 @@ const formatDate = (dateString) => {
 
   return `${day}-${month}-${year}`;
 };
+
+const editArticle = () => {
+  if (process.client) {
+    if (localStorage.getItem("auth-token")) {
+    } else {
+      navigateTo("/auth/login");
+    }
+  }
+};
 onMounted(() => {
   useRootStore().getArticleById(route.params.id);
 });
@@ -43,7 +52,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="d-flex justify-content-end w-100">
-      <button class="btn btn-primary">Edit</button>
+      <button class="btn btn-primary" @click="editArticle">Edit</button>
       <button
         class="btn btn-danger ms-2"
         @click="useRootStore().deleteArticle(currentBlog.id)"

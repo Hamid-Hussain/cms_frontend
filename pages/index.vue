@@ -6,6 +6,7 @@ const store = useRootStore();
 const { blogs } = storeToRefs(store);
 
 onMounted(async () => {
+  console.log("mountedddd");
   await useRootStore().getArticles("");
 });
 </script>
