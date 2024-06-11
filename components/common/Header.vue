@@ -21,9 +21,7 @@ const login = () => {
 };
 
 const getToken = () => {
-  console.log("innn");
   if (process.client) {
-    console.log("process.clinetttt", localStorage.getItem("auth-token"));
     return localStorage.getItem("auth-token");
   } else {
     return undefined;
