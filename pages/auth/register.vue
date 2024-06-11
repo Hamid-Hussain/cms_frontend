@@ -7,7 +7,6 @@ const password = ref("");
 const confirmPass = ref("");
 
 const submit = () => {
-  console.log("submitttt");
   const payload = {
     username: userName.value,
     email: email.value,
@@ -17,72 +16,6 @@ const submit = () => {
 };
 </script>
 <template>
-  <!-- <div class="login-container"> -->
-  <!-- <div class="row login vh-100">
-    <div class="col-md-8 img-wrapper d-flex">
-      <div class="m-auto">
-        <h2>
-          Welcome to <b><i>Write</i></b>
-        </h2>
-      </div>
-    </div>
-    <div class="col-md-4 m-auto form-wrapper d-flex justify-content-center">
-      <div class="">
-        <h2>Sign Up</h2>
-        <div>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input
-              v-model="userName"
-              type="text"
-              id="username"
-              name="username"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="username">Email</label>
-            <input
-              v-model="email"
-              type="email"
-              id="username"
-              name="username"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              v-model="password"
-              type="password"
-              id="password"
-              name="password"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Confirm Password</label>
-            <input
-              v-model="confirmPass"
-              type="password"
-              id="password"
-              name="password"
-              required
-            />
-          </div>
-          <button @click="submit">Register</button>
-          <div class="">
-            <span>
-              <p>Already have an account?</p>
-              <NuxtLink to="/auth/login">Login.</NuxtLink>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- </div> -->
-
   <div class="container mt-5">
     <div class="login-container">
       <h2 class="mb-4">Sign Up</h2>

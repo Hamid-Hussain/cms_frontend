@@ -1,7 +1,4 @@
 <script setup>
-// defineProps = {
-//   blog: { type: Object, default: {} },
-// };
 defineProps({
   featuredBlog: {
     type: Object,

@@ -6,15 +6,6 @@ const article = ref({
   date: "",
 });
 
-const handleSubmit = async () => {
-  // try {
-  //   await $axios.post("/api/articles", article.value);
-  //   // Redirect or give feedback
-  // } catch (error) {
-  //   console.error(error);
-  // }
-};
-
 const addArticle = async () => {
   const payload = {
     title: article.value.title,

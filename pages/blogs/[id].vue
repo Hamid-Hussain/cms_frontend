@@ -2,7 +2,6 @@
 const { currentBlog } = storeToRefs(useRootStore());
 const articleId = ref(1);
 const route = useRoute();
-// const router = useRouter()
 const formatDate = (dateString) => {
   const date = new Date(dateString);
   const day = String(date.getDate()).padStart(2, "0");
@@ -12,8 +11,6 @@ const formatDate = (dateString) => {
   return `${day}-${month}-${year}`;
 };
 onMounted(() => {
-  console.log(route.params.id);
-  // useRootStore().getArticleById();
   useRootStore().getArticleById(route.params.id);
 });
 </script>
@@ -41,7 +38,6 @@ onMounted(() => {
             <p>
               {{ currentBlog?.body }}
             </p>
-            <!-- Add more paragraphs or content as needed -->
           </div>
         </div>
       </div>
@@ -58,25 +54,6 @@ onMounted(() => {
   </div>
 </template>
 <style lang="scss">
-// .blog-title {
-//   font-size: 2.5rem;
-//   font-weight: bold;
-//   margin-bottom: 20px;
-// }
-// .blog-author,
-// .blog-date {
-//   font-size: 1rem;
-//   color: #6c757d;
-// }
-// .blog-body {
-//   font-size: 1.2rem;
-//   line-height: 1.6;
-//   margin-top: 20px;
-// }
-// .container {
-//   max-width: 800px;
-// }
-
 .blog-container {
   margin-top: 20px;
   margin-bottom: 20px;

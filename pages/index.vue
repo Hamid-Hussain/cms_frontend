@@ -1,14 +1,11 @@
 <script setup>
 import BlogCard from "~/components/blogs/BlogCard.vue";
-// import { useBlogs } from "~/composables/useBlogs";
 import FeaturedBlog from "~/components/blogs/FeaturedBlog.vue";
-// import Header from "~/components/common/Header.vue";
 
 const store = useRootStore();
 const { blogs } = storeToRefs(store);
 
 onMounted(async () => {
-  console.log("mountedddd");
   await useRootStore().getArticles("");
 });
 </script>

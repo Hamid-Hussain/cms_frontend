@@ -41,10 +41,6 @@ const truncateBody = (body) => {
   </div>
 </template>
 <style lang="scss" scoped>
-// .blog-container {
-//   margin-top: 20px;
-//   margin-bottom: 20px;
-// }
 .blogjustify-content-center-header {
   margin-bottom: 20px;
 }
